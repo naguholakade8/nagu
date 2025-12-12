@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+/* Navbar */
+header {
+    background: #003366;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#menu-btn {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://picsum.photos/1200/600?college') center/cover no-repeat;
+    height: 90vh;
+    padding-top: 120px;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    background: #ffcc00;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Courses */
+.courses {
+    padding: 60px;
+    text-align: center;
+}
+
+.course-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.course-card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+/* Gallery */
+.gallery {
+    padding: 60px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Contact Form */
+.contact {
+    padding: 60px;
+    text-align: center;
+}
+
+form {
+    width: 350px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+form button {
+    background: #003366;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #003366;
+        padding: 20px;
+        position: absolute;
+        right: 20px;
+        top: 60px;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+
+    .course-list {
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

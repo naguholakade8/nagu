@@ -3,11 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <h2>my email naguholakade8</h2>
+    <title>My College</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">MyCollege</div>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div id="menu-btn">☰</div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Welcome to My College</h1>
+        <p>Empowering students for a brighter future.</p>
+        <button onclick="scrollToSection('courses')">Explore Courses</button>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses" class="courses">
+        <h2>Our Programs</h2>
+        <div class="course-list">
+            <div class="course-card">
+                <h3>Computer Science</h3>
+                <p>Learn programming, AI, software engineering & more.</p>
+            </div>
+            <div class="course-card">
+                <h3>Business Administration</h3>
+                <p>Develop leadership, marketing, finance & management skills.</p>
+            </div>
+            <div class="course-card">
+                <h3>Mechanical Engineering</h3>
+                <p>Study machines, robotics, manufacturing & design.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery">
+        <h2>Campus Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://picsum.photos/300/200?random=1" alt="">
+            <img src="https://picsum.photos/300/200?random=2" alt="">
+            <img src="https://picsum.photos/300/200?random=3" alt="">
+            <img src="https://picsum.photos/300/200?random=4" alt="">
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p id="form-status"></p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
